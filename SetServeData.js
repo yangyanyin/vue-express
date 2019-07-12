@@ -20,6 +20,7 @@ app.use(express.static('build'))
 // 启动成功提示 
 var time = new Date()
 console.info('启动成功:', time)
+console.info('location:', 'location:5000')
 
 // 路由输入
 app.use(router)

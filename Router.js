@@ -1,19 +1,13 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const apiData = require('./httpApi')
 
-userInfo = {
-	name: '秧艳银',
-	age: '25',
-	sex: '男'
-}
+// JSON.parse('<%- JSON.stringify(content)%>');   html页面解析 json
 
-router.get('/', function(req, res, next) {
-  res.render('home/index', userInfo);
-});
+router.get('/', apiData.homeData);
 
 router.get('/passport', function(req, res, next) {
   res.render('passport/index');
 });
-
 
 module.exports = router
